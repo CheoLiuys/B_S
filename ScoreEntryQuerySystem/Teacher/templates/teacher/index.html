@@ -1,0 +1,26 @@
+{% extends 'teacher/base.html' %}
+{% block connect %}
+    <div class="x-body">
+        {% if teachInfo %}
+            <blockquote class="layui-elem-quote">
+                <p>教师姓名：{{ teachInfo.teacherName }}</p>
+            </blockquote>
+            <blockquote class="layui-elem-quote">
+                <p>教师工号：{{ teachInfo.teacherId }}</p>
+            </blockquote>
+            <blockquote class="layui-elem-quote">
+                <p>所属院系：{{ teachInfo.teacherFaculty }}</p>
+            </blockquote>
+            <blockquote class="layui-elem-quote">
+                <p>教授科目：{{ teachInfo.teacherSub }}</p>
+            </blockquote>
+            <blockquote class="layui-elem-quote">
+                <p>教师邮箱：{{ teachInfo.teacherEmail }}</p>
+            </blockquote>
+        {% else %}
+            <blockquote class="layui-elem-quote">
+                欢迎使用x-admin 后台模版！<span class="f-14">v1.0</span>官方交流群： 519492808
+            </blockquote>
+        {% endif %}
+    </div>
+{% endblock %}
